@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人資料填寫 + 問卷調查</title>
+</head>
+<body>
+
+    <h2>個人資料填寫 + 問卷調查</h2>
+
+    <form action="http://210.240.159.51/answer.php" method="POST">
+        <fieldset>
+            <legend>基本資料</legend>
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label>性別：</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">女</label><br><br>
+
+            <label for="birthday">出生日期：</label>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+
+            <label for="email">電子郵件：</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">聯絡電話：</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" required><br><br>
+        </fieldset>
+
+    
+        <fieldset>
+            <legend>興趣與習慣</legend>
+
+            <label>喜歡的運動：</label><br>
+            <input type="checkbox" id="basketball" name="sports" value="basketball">
+            <label for="basketball">籃球</label>
+            <input type="checkbox" id="soccer" name="sports" value="soccer">
+            <label for="soccer">足球</label>
+            <input type="checkbox" id="swimming" name="sports" value="swimming">
+            <label for="swimming">游泳</label>
+            <input type="checkbox" id="running" name="sports" value="running">
+            <label for="running">跑步</label><br><br>
+
+            <label for="exercise">每週運動頻率：</label>
+            <input type="range" id="exercise" name="exercise" min="0" max="7"><br><br>
+
+            <label for="phone_time">平均每日使用手機時間（小時）：</label>
+            <input type="number" id="phone_time" name="phone_time" min="0" max="24"><br><br>
+
+            <label for="social_media">偏好的社群平台：</label>
+            <select id="social_media" name="social_media">
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+                <option value="twitter">Twitter</option>
+                <option value="tiktok">TikTok</option>
+                <option value="youtube">YouTube</option>
+            </select><br><br>
+
+            <label for="comments">其他建議：</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <input type="submit" value="提交">
+        <input type="reset" value="重設">
+    </form>
+
+</body>
+</html>
