@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>李泫坤的個人履歷</title>
+  <title>我的個人履歷</title>
   <style>
     body {
       font-family: "微軟正黑體", sans-serif;
@@ -42,6 +42,64 @@
       padding: 10px;
       color: #888;
     }
+
+    .slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.mySlide {
+  display: none;
+}
+
+.fade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.5);
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.dot-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
   </style>
 </head>
 <body>
@@ -62,6 +120,15 @@
       最愛的Rapper是Asen
 
     </p>
+    <section class="contact">
+      <h2>聯絡資訊</h2>
+      <p>📧 Email：<a href="mailto:az5946712@gmail.com">az5946712@gmail.com</a></p>
+      <p>📞 電話：0906-842-717</p>
+      <p>🌐 社交網站：<a href="https://www.instagram.com/zzk72ii_/" target="_blank">zzk72ii_</a></p>
+  
+  
+  </section>
+
   </section>
 
   <section>
@@ -88,12 +155,41 @@
     <ul>
       <li>開一張以太幣合約網格單 投資差不多105美金96天已實現利潤+浮動盈虧約62美金 投報率60% </li>
     </ul>
-    <img src="IMG_2369.jpg" alt="這是一張照片" width="300">
+    <img src="qq.HEIC" alt="這是一張照片" width="300">
     <ul>
       <li>成功幫我朋友家的狗戴上墨鏡 </li>
     </ul>
   </section>
-
+  <section>
+    <h2>表演照片</h2>
+    <p>去年6月在市區南京路廣場的表演</p>
+    <div class="slideshow-container">
+  
+      <div class="mySlide fade">
+        <img src="IMG_0819.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlide fade">
+        <img src="IMG_0820 (1).JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlide fade">
+        <img src="IMG_2375.jpg" style="width:100%">
+      </div>
+  
+      <!-- 左右箭頭 -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  
+    <!-- 圓點 -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+  
   <section>
     <h2>喜歡的歌</h2>
     <p>我最愛的歌是Asen的焦慮</p>
@@ -111,15 +207,84 @@
 <br><a href="https://youtu.be/FNItSWqF7EI?si=5TYz7asmzyeZHVtM">芳草地</a>
   </section>
 </div>
-  <section class="contact">
-    <h2>聯絡資訊</h2>
-    <p>📧 Email：<a href="mailto:az5946712@gmail.com">az5946712@gmail.com</a></p>
-    <p>📞 電話：0906-842-717</p>
-    <p>🌐 社交網站：<a href="https://www.instagram.com/zzk72ii_/" target="_blank">zzk72ii_</a></p>
+
+<section>
+  <h2>越南之旅</h2>
+  <div class="slideshow-container">
+
+    <div class="mySlide fade">
+      <img src="IMG_2372.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlide fade">
+      <img src="IMG_2373.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlide fade">
+      <img src="IMG_2374.jpg" style="width:100%">
+    </div>
+
+    <!-- 左右箭頭 -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- 圓點 -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
 
 
-  </section>
 
+</section>
+
+<section>
+    <!-- 自我介紹下載 -->
+<section class="section" id="download">
+  <h2>個人檔案下載</h2>
+  <p>點擊以下按鈕即可下載我的個人檔案 </p>
+  <a href="台東綠資-三折頁.pdf" download class="download-btn"> 下載我的檔案</a>
+</section>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // 左右切換
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // 點擊圓點
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    // 顯示圖片
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }    
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    
+    // 自動播放
+    setInterval(() => {
+      plusSlides(1);
+    }, 3000);
+    </script>
+    
   <footer>
     &copy; 2025 李泫坤 zzk. 
   </footer>
